@@ -8,11 +8,13 @@ import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import typescript from '@rollup/plugin-typescript';
+import litTailwind from '@takanorip/rollup-plugin-lit-tailwindcss';
 
 export default {
-  input: 'my-element.js',
+  input: 'src/index.ts',
   output: {
-    file: 'my-element.bundled.js',
+    file: 'dist/my-elements.bundled.js',
     format: 'esm',
   },
   onwarn(warning) {
@@ -21,6 +23,7 @@ export default {
     }
   },
   plugins: [
+    typescript(),
     replace({'Reflect.decorate': 'undefined'}),
     resolve(),
     terser({
@@ -34,5 +37,10 @@ export default {
       },
     }),
     summary(),
+    litTailwind({
+      include: 'src/**/*.ts',
+      exclude: undefined,
+      placeholder: '__tw_placeholder__',
+    }),
   ],
 };

@@ -23,7 +23,7 @@ export class MyElement extends LitElement {
       padding: 16px;
       max-width: 800px;
     }
-  `;
+    __tw_placeholder__`;
 
   /**
    * The name to say "Hello" to.
@@ -39,7 +39,9 @@ export class MyElement extends LitElement {
 
   override render() {
     return html`
-      <h1>${this.sayHello(this.name)}!</h1>
+      <h1 class="text-purple-400 md:text-red-400 md:hover:text-green-500">
+        ${this.sayHello(this.name)}!
+      </h1>
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>

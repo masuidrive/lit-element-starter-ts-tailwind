@@ -6,15 +6,23 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../dist/my-elements.bundled.js"></script>
     <style>
       p {
         border: solid 1px blue;
         padding: 8px;
       }
+      body {
+        /* use in my-error element */
+        --app-font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
   </head>
   <body>
+    <my-error>
+      <div slot="title">Error!</div>
+      <div slot="description">Unknow?</div>
+    </my-error>
     <my-element>
       <p>This is child content</p>
     </my-element>

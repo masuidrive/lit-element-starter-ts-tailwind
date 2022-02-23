@@ -1,14 +1,15 @@
 {
-  "name": "@lit/lit-starter-ts",
+  "name": "my-elements",
   "private": true,
   "version": "1.0.0",
   "description": "A simple web component",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "main": "my-elements.js",
+  "module": "my-elements.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "dev": "nf --procfile Procfile.dev start",
+    "build": "rollup --config",
+    "build:watch": "rollup --config --watch",
     "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
@@ -18,7 +19,7 @@
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/my-element.bundled.js",
+    "docs:build": "rollup -c --file docs/my-elements.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "wds --root-dir=docs --node-resolve --watch",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
@@ -30,7 +31,7 @@
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup --config ; cat my-elements.bundled.js | gzip -9 | wc -c ; rm my-elements.bundled.js"
   },
   "keywords": [
     "web-components",
@@ -52,6 +53,8 @@
     "@open-wc/testing-karma": "^4.0.9",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@takanorip/rollup-plugin-lit-tailwindcss": "^0.0.2",
     "@types/mocha": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.30.0",
@@ -64,14 +67,14 @@
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
+    "foreman": "^3.0.1",
     "lit-analyzer": "^1.1.10",
     "mocha": "^9.1.1",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.28.2",
     "rollup-plugin-summary": "^1.2.3",
-    "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.3.5"
+    "rollup-plugin-terser": "^7.0.2"
   },
   "customElements": "custom-elements.json"
 }
