@@ -5,7 +5,7 @@ yarn install
 yarn dev
 ```
 
-[http://localhost:8000/]を開く
+http://localhost:8000/ を開く
 
 ## 参考サイト
 
