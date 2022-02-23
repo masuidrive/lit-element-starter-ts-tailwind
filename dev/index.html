@@ -4,8 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <title>&lt;my-element> Demo</title>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../dist/my-elements.bundled.js"></script>
     <style>
       p {
@@ -21,7 +19,7 @@
   <body>
     <my-error>
       <div slot="title">Error!</div>
-      <div slot="description">Unknow?</div>
+      <div slot="description">Error message</div>
     </my-error>
     <my-element>
       <p>This is child content</p>

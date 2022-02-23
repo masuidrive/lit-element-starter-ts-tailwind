@@ -16,6 +16,8 @@ export default {
   output: {
     file: 'dist/my-elements.bundled.js',
     format: 'esm',
+    exports: "named",
+    sourcemap: 'inline',
   },
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
@@ -23,7 +25,12 @@ export default {
     }
   },
   plugins: [
-    typescript(),
+    typescript({
+      sourceMap: true,
+      declaration: true,
+      rootDir: "src",
+      declarationDir: "dist",
+    }),
     replace({'Reflect.decorate': 'undefined'}),
     resolve(),
     terser({
