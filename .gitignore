@@ -3,3 +3,4 @@ node_modules/
 /test/
 custom-elements.json
 *.log
+.DS_Store

@@ -17,7 +17,7 @@ export default {
     file: 'dist/my-elements.bundled.js',
     format: 'esm',
     exports: "named",
-    sourcemap: 'inline',
+    sourcemap: true
   },
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
