@@ -4,5 +4,5 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import './my-element';
-import './my-error';
+export {MyElement} from './my-element';
+export {MyError} from './my-error';

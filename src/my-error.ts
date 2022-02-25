@@ -3,7 +3,6 @@ import {customElement} from 'lit/decorators.js';
 
 /**
  * An example error element.
- *
  */
 @customElement('my-error')
 export class MyError extends LitElement {
@@ -15,9 +14,11 @@ export class MyError extends LitElement {
 `;
 
   override render() {
+    // https://github.com/merakiui/merakiui/blob/main/components/ui/Alerts/ErrorPop.vue
+    // MIT License: Copyright (c) 2021 Baka Team
     return html`
       <div
-        class="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800"
+        class="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md"
       >
         <div class="flex items-center justify-center w-12 bg-red-500">
           <svg
@@ -30,18 +31,10 @@ export class MyError extends LitElement {
             />
           </svg>
         </div>
-
         <div class="px-4 py-2 -mx-3">
           <div class="mx-3">
-            <slot
-              name="title"
-              class="block font-semibold text-red-500 dark:text-red-400"
-            >
-            </slot>
-            <slot
-              name="description"
-              class="block text-sm text-gray-600 dark:text-gray-200"
-            ></slot>
+            <slot name="title" class="block font-semibold text-red-500"> </slot>
+            <slot name="description" class="block text-sm text-gray-600"></slot>
           </div>
         </div>
       </div>

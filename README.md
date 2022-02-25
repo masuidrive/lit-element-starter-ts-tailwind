@@ -21,6 +21,8 @@ yarn dev
 
 [rollup.config.js](https://github.com/masuidrive/lit-element-starter-ts-tailwind/blob/main/rollup.config.js)に設定を追加し、[ソース](https://github.com/masuidrive/lit-element-starter-ts-tailwind/blob/main/src/my-error.ts)にも placeholder を追加
 
+dark mode は動かない。component の中から外の `media` や `class` は知れないと思うし。
+
 ### Storybook の設定
 
 Storybook を`npx sb init`で導入して、`Web Components`を選択
