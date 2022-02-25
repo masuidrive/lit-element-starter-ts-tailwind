@@ -34,3 +34,7 @@ stories の例は、[src/my-error.stories.js](https://github.com/masuidrive/lit-
 ### Storybook の Preview
 
 [chromatic](https://www.chromatic.com/)の利用をお勧め
+
+[.github/workflows/chromatic.yml](https://github.com/masuidrive/lit-element-starter-ts-tailwind/blob/main/.github/workflows/chromatic.yml)で CI を回してアップデートされます。
+
+https://main--62175e8a0cd6a5003acfc190.chromatic.com
