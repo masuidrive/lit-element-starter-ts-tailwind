@@ -33,7 +33,7 @@ export class MyError extends LitElement {
         </div>
         <div class="px-4 py-2 -mx-3">
           <div class="mx-3">
-            <slot name="title" class="block font-semibold text-red-500"> </slot>
+            <slot name="title" class="block font-semibold text-red-500"></slot>
             <slot name="description" class="block text-sm text-gray-600"></slot>
           </div>
         </div>
