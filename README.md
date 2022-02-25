@@ -1,11 +1,18 @@
-# Lit + Typescript + Tailwind の開発環境
+# Lit + Typescript + Tailwind + Storybook の開発環境
 
 ```
 yarn install
 yarn dev
 ```
 
-http://localhost:8000/ を開く
+`dev/index.html` のページと storybook が自動で開きます。
+
+
+## 開発ツール
+
+### StorybookのPreview
+[chromatic](https://www.chromatic.com/)を導入済み
+
 
 ## 参考サイト
 

@@ -26,7 +26,7 @@ export class MyError extends LitElement {
         class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"
         role="alert"
       >
-        <slot name="title" class="font-bold"></slot>
+        <slot name="title" class="font-bold block mb-2"></slot>
         <slot name="description" class="block sm:inline"></slot>
       </div>
     `;

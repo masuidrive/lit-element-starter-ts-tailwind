@@ -48,6 +48,6 @@ export default {
       include: 'src/**/*.ts',
       exclude: undefined,
       placeholder: '__tw_placeholder__',
-    }),
+    })
   ],
 };
