@@ -1,3 +1,3 @@
 lit: npm run build:watch
-server: node live-server.js
+server: npm run serve
 storybook: npm run storybook

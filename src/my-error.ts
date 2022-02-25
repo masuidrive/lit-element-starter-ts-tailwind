@@ -1,9 +1,3 @@
-/**
- * @license
- * Copyright 2022- masuidrive
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import {LitElement, html, css} from 'lit';
 import {customElement} from 'lit/decorators.js';
 
@@ -15,7 +9,7 @@ import {customElement} from 'lit/decorators.js';
 export class MyError extends LitElement {
   static override styles = css`
     :host {
-      font-family: var(--app-font-family);
+      font-family: var(font-family);
     }
     __tw_placeholder__
 `;
@@ -38,3 +32,9 @@ declare global {
     'my-error': MyError;
   }
 }
+
+/**
+ * @license
+ * Copyright 2022- masuidrive
+ * SPDX-License-Identifier: BSD-3-Clause
+ */

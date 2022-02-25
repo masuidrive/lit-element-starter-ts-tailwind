@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts", "src/my-error.stories.js"],
+  "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules/**"]
 }
