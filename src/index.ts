@@ -6,3 +6,4 @@
 
 export {MyElement} from './my-element';
 export {MyError} from './my-error';
+export {MyButton} from './my-button';

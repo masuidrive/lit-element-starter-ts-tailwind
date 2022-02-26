@@ -9,7 +9,7 @@ import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
-import litTailwind from '@takanorip/rollup-plugin-lit-tailwindcss';
+import litTailwind from 'rollup-plugin-lit-tailwindcss3';
 
 export default {
   input: 'src/index.ts',

@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.js"],
+  "include": ["src/**/*.ts", "src/**/*.js", "src/my-element.ts", "src/my-button.ts"],
   "exclude": ["node_modules/**"]
 }
