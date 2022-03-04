@@ -1,7 +1,9 @@
 import { Template, html } from './helpers/stories-helper'
+import '../dist/index';
 
 export default {
   title: 'MyButton',
+  component: 'my-button',
 };
 
 const MyButton = ({ label }) => html`

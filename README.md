@@ -5,11 +5,13 @@
 ## 設定と実行
 
 ```
-yarn install
-yarn dev
+npm install
+npm run dev
 ```
 
-`dev/index.html` のページと storybook が自動で開く
+storybook が自動で開きます。
+
+
 
 ## ポイント
 
@@ -28,7 +30,9 @@ yarn dev
 
 そのままでは全ての CSS が全コンポーネントに入ってしまうため、[Lit で Tailwind CSS を使う](https://zenn.dev/takanorip/scraps/490a85916942cb)を参考に対応
 
-[@takanorip/rollup-plugin-lit-tailwindcss](https://www.npmjs.com/package/@takanorip/rollup-plugin-lit-tailwindcss)パッケージの導入
+プラグインに足りない部分があったので[rollup-plugin-lit-tailwindcss3](https://www.npmjs.com/package/rollup-plugin-lit-tailwindcss3)を自分で作ってみた。
+
+
 
 [rollup.config.js](https://github.com/masuidrive/lit-element-starter-ts-tailwind/blob/main/rollup.config.js)に設定を追加し、[ソース](https://github.com/masuidrive/lit-element-starter-ts-tailwind/blob/main/src/my-error.ts)にも placeholder を追加
 

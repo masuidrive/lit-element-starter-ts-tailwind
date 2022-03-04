@@ -4,11 +4,9 @@
     "module": "es2020",
     "lib": ["es2020", "DOM", "DOM.Iterable"],
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
     "inlineSources": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -28,6 +26,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/my-element.ts", "src/my-button.ts"],
+  "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules/**"]
 }

@@ -1,37 +1,24 @@
-/**
- * @license
- * Copyright 2018 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
-import replace from '@rollup/plugin-replace';
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2'
 import litTailwind from 'rollup-plugin-lit-tailwindcss3';
 
 export default {
-  input: 'src/index.ts',
-  output: {
-    file: 'dist/my-elements.bundled.js',
+  input: "src/index.ts",
+  output: [{
+    file: 'dist/index.js',
     format: 'esm',
-    exports: "named",
     sourcemap: true
-  },
+  }],
+
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
       console.error(`(!) ${warning.message}`);
     }
   },
   plugins: [
-    typescript({
-      sourceMap: true,
-      declaration: true,
-      rootDir: "src",
-      declarationDir: "dist",
-    }),
-    replace({'Reflect.decorate': 'undefined'}),
+    typescript(),
     resolve(),
     terser({
       ecma: 2017,

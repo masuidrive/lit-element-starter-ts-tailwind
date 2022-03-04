@@ -3,9 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "description": "A simple web component",
-  "main": "dist/my-elements.js",
-  "module": "dist/my-elements.js",
-  "types": "dist/my-element.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nf --procfile Procfile.dev start",
     "build": "rollup --config",
@@ -18,9 +17,9 @@
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "serve": "node live-server.js",
-    "checksize": "rollup --config ; cat dist/my-elements.bundled.js | gzip -9 | wc -c ; rm dist/my-elements.bundled.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "checksize": "rollup --config ; cat dist/index.js | gzip -9 | wc -c ; rm dist/index.js",
+    "storybook": "npm run analyze && build-storybook",
+    "storybook:watch": "start-storybook -p 6006 --quiet",
     "chromatic": "npx chromatic --project-token=3ea3da69121d"
   },
   "keywords": [
@@ -32,19 +31,20 @@
   "author": "masuidrive",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "lit": "^2.0.0"
+    "element-internals-polyfill": "^1.0.3",
+    "lit": "^2.0.0",
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@custom-elements-manifest/analyzer": "^0.5.3",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
-    "@rollup/plugin-typescript": "^8.3.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
     "@storybook/web-components": "^6.4.19",
-    "@types/mocha": "^9.0.0",
+    "@types/web": "^0.0.54",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.30.0",
     "@webcomponents/webcomponentsjs": "^2.6.0",
@@ -56,13 +56,13 @@
     "lit-analyzer": "^1.1.10",
     "lit-html": "^2.2.0",
     "live-server": "^1.2.1",
-    "mocha": "^9.1.1",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.28.2",
-    "rollup-plugin-lit-tailwindcss3": "^2.1.4",
+    "rollup-plugin-lit-tailwindcss3": "^2.1.6",
     "rollup-plugin-summary": "^1.2.3",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2"
   },
   "customElements": "custom-elements.json"
 }

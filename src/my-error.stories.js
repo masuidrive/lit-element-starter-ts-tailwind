@@ -1,7 +1,9 @@
 import { Template, html } from './helpers/stories-helper'
+import '../dist/index';
 
 export default {
   title: 'MyError',
+  component: 'my-error',
 };
 
 const MyError = ({ title, description }) => html`
